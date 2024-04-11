@@ -1,0 +1,99 @@
+:root{
+--deep-midnight: #00111C;
+--dark-slate: #001523;
+--space-blue: #001A2C;
+--deep-ocean: #002137;
+--twilight-navy: #00253E;
+--night-sky: #002945;
+--dark-cerulean: #002E4E;
+--galaxy-blue: #003356;
+--deep-sea: #003A61;
+--cobalt-blue: #00406C;
+}
+
+
+body {
+  font-weight: 400;
+  font-style:normal;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.15;
+  background-color: #FFF;
+}
+
+html, body {
+  font-family: Inter;
+  font-size: 16px;
+  height: 100%; 
+  width:100%;
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.info {
+  color:var(--deep-midnight);
+  padding:20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width:550px;
+}
+
+#line1, #line2{
+  margin-bottom:10px;
+}
+
+#standoutText, #projectsRef{
+  font-weight:700;
+  color:var(--deep-midnight);
+}
+
+.links{
+  display:flex;
+  width:150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#linkedin,
+#github, 
+#email{
+  width:35px;
+  height:35px;
+}
+
+#projectsRef {
+  display: inline-block;
+  letter-spacing: -2px; 
+}
+
+.wave {
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-right: 0px; 
+}
+
+#projectsRef:hover .wave {
+  animation: wave-animation 0.6s ease-in-out forwards;
+}
+
+@keyframes wave-animation {
+  0%, 40%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+
+#projectsRef:hover .wave:nth-child(1) { animation-delay: 0s; }
+#projectsRef:hover .wave:nth-child(2) { animation-delay: 0.1s; }
+#projectsRef:hover .wave:nth-child(3) { animation-delay: 0.2s; }
+#projectsRef:hover .wave:nth-child(4) { animation-delay: 0.3s; }
